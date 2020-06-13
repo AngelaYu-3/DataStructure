@@ -27,6 +27,8 @@ public class selectionSort {
 	public selectionSort() {
 		System.out.print("\nPlease enter in a list of integers separated by commas only or enter q to quit: ");
 		String input = in.nextLine();
+		input = input.replaceAll("\\s+","");
+		
 		String regex = "[\\d, /, /-]+"; //used to see if "0-9" and "," are only present in input
 		
 		if(input.contentEquals("q") || input.contentEquals("Q")) {
@@ -43,6 +45,7 @@ public class selectionSort {
 			input = in.nextLine();
 		}
 		
+		input = input.replaceAll("\\s+","");
 		values = input.split(",");
 		array = new int[values.length];
 		for(String str:values) {

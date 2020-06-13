@@ -2,69 +2,69 @@ import java.util.Arrays;
 
 public class mergeSort {
 	
-    public void mergeHelper(int[] left, int[] right, int[] x) {
-        int i = 0;
-        int j = 0;
-        int k = 0;
+    public void mergeHelper(int[] left, int[] right, int[] array) {
+        int leftIdx = 0;
+        int rightIdx = 0;
+        int sortIdx = 0;
         
-    	while(i < left.length && j < right.length) {
-    	    if(left[i] <= right[j]) {
-    	    	x[k] = left[i];
-    	    	i++;
-    	    	k++;
+    	while(leftIdx < left.length && rightIdx < right.length) {
+    	    if(left[leftIdx] <= right[rightIdx]) {
+    	    	array[sortIdx] = left[leftIdx];
+    	    	leftIdx++;
+    	    	sortIdx++;
     	    }
     	    else {
-    	    	x[k] = right[j];
-    	    	j++;
-    	    	k++;
+    	    	array[sortIdx] = right[rightIdx];
+    	    	rightIdx++;
+    	    	sortIdx++;
     	    }
     	}
     	
-    	while(i < left.length) {
-    		x[k] = left[i];
-    		i++;
-    		k++;
+    	while(leftIdx < left.length) {
+    		array[sortIdx] = left[leftIdx];
+    		leftIdx++;
+    		sortIdx++;
     	}
     	
-    	while(j < right.length) {
-    		x[k] = right[j];
-    		j++;
-    		k++;
+    	while(rightIdx < right.length) {
+    		array[sortIdx] = right[rightIdx];
+    		rightIdx++;
+    		sortIdx++;
     	}
     }
     
-    public int[] merge(int[] x) {
+    public int[] merge(int[] array) {
     
-    	int middle = x.length / 2;
+    	int middle = array.length / 2;
     	int[] left = new int[middle];
-    	int[] right = new int[x.length - middle];
+    	int[] right = new int[array.length - middle];
     	
-    	if(x.length == 1) {
-    		return x;
+    	if(array.length == 1) {
+    		return array;
     	}
     	
     	//left array
     	for(int i = 0; i < middle; i++) {
-    	    left[i] = x[i];
+    	    left[i] = array[i];
     	}
     	
     	//right array
     	int i = 0;
-    	for(int j = middle; j < x.length; j++) {   		
-    		right[i] = x[j];  
+    	for(int j = middle; j < array.length; j++) {   		
+    		right[i] = array[j];  
     		i++;
     	}
     	
     	merge(left);
     	merge(right);
-    	mergeHelper(left,right, x);
-		return x;
+    	mergeHelper(left,right, array);
+		return array;
     	
     }
     
     /*public static void main(String[] args) {
     	mergeSort test = new mergeSort();
-    	int[] array = {-1,7,5};
+    	int[] array = {-1,7,5,13,0};
     	System.out.println(Arrays.toString(test.merge(array)));
     	
     }*/
