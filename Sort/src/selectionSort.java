@@ -27,7 +27,7 @@ public class selectionSort {
 	public selectionSort() {
 		System.out.print("\nPlease enter in a list of integers separated by commas only or enter q to quit: ");
 		String input = in.nextLine();
-		input = input.replaceAll("\\s+","");
+		input = input.replaceAll("\\s+",""); //removes all white spaces in input
 		
 		String regex = "[\\d, /, /-]+"; //used to see if "0-9" and "," are only present in input
 		
