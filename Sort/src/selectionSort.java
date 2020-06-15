@@ -88,7 +88,7 @@ public class selectionSort {
 			
 			sort1.sort();
 			sort2.sort(array);
-			System.out.println("Selection Sort: " + Arrays.toString(sort3.merge(array)));
+			System.out.println("Merge Sort: " + Arrays.toString(sort3.merge(array)));
 			
 		}while(true);
 	}

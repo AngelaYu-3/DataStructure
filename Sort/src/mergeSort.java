@@ -64,7 +64,7 @@ public class mergeSort {
     
     /*public static void main(String[] args) {
     	mergeSort test = new mergeSort();
-    	int[] array = {-1,7,5,13,0};
+    	int[] array = {5,5};
     	System.out.println(Arrays.toString(test.merge(array)));
     	
     }*/
