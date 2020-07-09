@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4275fa7e-6fbe-4076-813e-14727305a272" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/LinkedList.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SortedLinkedList/.idea/List.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/List.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedList.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,26 +88,62 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="140" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594227342230">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="140" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1594227342230" />
-    <state width="1348" height="227" key="GridCell.Tab.0.bottom" timestamp="1594229849940">
+    <state width="1348" height="196" key="GridCell.Tab.0.bottom" timestamp="1594276364367">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594229849940" />
-    <state width="1348" height="227" key="GridCell.Tab.0.center" timestamp="1594229849940">
+    <state width="1348" height="196" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594276364367" />
+    <state width="1348" height="196" key="GridCell.Tab.0.center" timestamp="1594276364367">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1594229849940" />
-    <state width="1348" height="227" key="GridCell.Tab.0.left" timestamp="1594229849940">
+    <state width="1348" height="196" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1594276364367" />
+    <state width="1348" height="196" key="GridCell.Tab.0.left" timestamp="1594276364366">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1594229849940" />
-    <state width="1348" height="227" key="GridCell.Tab.0.right" timestamp="1594229849940">
+    <state width="1348" height="196" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1594276364366" />
+    <state width="1348" height="196" key="GridCell.Tab.0.right" timestamp="1594276364367">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1594229849940" />
+    <state width="1348" height="196" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1594276364367" />
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1594259660255">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594259660255" />
+    <state width="1348" height="281" key="GridCell.Tab.1.center" timestamp="1594259660254">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1594259660254" />
+    <state width="1348" height="281" key="GridCell.Tab.1.left" timestamp="1594259660254">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1594259660254" />
+    <state width="1348" height="281" key="GridCell.Tab.1.right" timestamp="1594259660254">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1594259660254" />
+    <state x="251" y="168" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1594259366041">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="251" y="168" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1368.872@0.0.1368.872" timestamp="1594259366041" />
+    <state x="347" y="184" width="672" height="678" key="search.everywhere.popup" timestamp="1594259121838">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="347" y="184" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1594259121838" />
   </component>
 </project>
