@@ -1,3 +1,15 @@
+"""
+basic linked list implemetation:
+    add Tail & Head
+    remove Tail & Head
+    remove at a certain index
+
+    TODO
+       -only print when calling remove() not w/ removeHead() & removeTail() too
+       -user interface
+       -try to break logic!
+"""
+
 class Node:
     def __init__(self, data, next):
         self.data = data
