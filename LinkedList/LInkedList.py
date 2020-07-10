@@ -3,11 +3,6 @@ basic linked list implemetation:
     add Tail & Head
     remove Tail & Head
     remove at a certain index
-
-    TODO
-       -only print when calling remove() not w/ removeHead() & removeTail() too
-       -user interface
-       -try to break logic!
 """
 
 class Node:
@@ -25,14 +20,14 @@ class LinkedList:
         self.size = 0
         self.head = None
 
-    def size(self):
-        return self.size
+    def sz(self):
+        return print(self.size)
 
     def peek(self):
         if self.head is None:
             return None
         else:
-            return self.head.data
+            return print(self.head.data)
 
     def print(self):
         current = self.head
@@ -71,33 +66,51 @@ class LinkedList:
 
     #removing from back of list
     def removeTail(self):
-        current = self.head
+        if self.size == 1:
+            newHead = Node(None, None)
+            self.head = newHead
+            self.size -= 1
 
-        while current.next.next is not None:
-            current = current.next
+        elif self.size == 0:
+            return None
 
-        data = current.next.data
-        current.next = None
-        self.size -= 1
-        return data
+        else:
+            current = self.head
+
+            while current.next.next is not None:
+                current = current.next
+
+            data = current.next.data
+            current.next = None
+            self.size -= 1
+            return data
 
     #removing from front of list
     def removeHead(self):
-        newHead = Node(self.head.next.data, self.head.next.next)
-        data = self.head.data
-        self.head.next = None
-        self.head = newHead
-        self.size -= 1
-        return print(data)
+        if self.size == 1:
+            newHead = Node(None, None)
+            self.head = newHead
+            self.size -= 1
+
+        elif self.size == 0:
+            return None
+
+        else:
+            newHead = Node(self.head.next.data, self.head.next.next)
+            data = self.head.data
+            self.head.next = None
+            self.head = newHead
+            self.size -= 1
+            return data
 
     #removing and returning node at location i--i is relative to head Node (pos 1)
     def remove(self, i):
         if i > self.size:
             return None
         elif i == 1:
-            self.removeHead()
+            print(self.removeHead())
         elif i == self.size:
-            self.removeTail()
+            print(self.removeTail())
         else:
             current = self.head
             currentInd = 1
@@ -111,32 +124,45 @@ class LinkedList:
             data = current.next.data
             return data
 
+    #connect linked list with users
+    def user(self, option):
+       if option == 'size':
+           return self.sz()
+
+       elif option == 'peek':
+           return self.peek()
+
+       elif option == 'addHead':
+           data = int(input("Value of data: "))
+           return self.addHead(data)
+
+       elif option == 'addTail':
+           data = int(input("Value of data: "))
+           return self.addTail(data)
+
+       elif option == 'removeTail':
+           return self.removeTail()
+
+       elif option == 'removeHead':
+           return self.removeHead()
+
+       elif option == 'print':
+           return self.print()
+
+       else:
+           index = int(input("Value of index: "))
+           return self.remove(index)
 
 
 def main():
     ll = LinkedList()
-    ll.addTail(3)
-    ll.addTail(785)
-    ll.addHead(45)
-    ll.addTail(32)
-    ll.addTail(20)
-    ll.addHead(18)
-    ll.print()
-    print('\n')
-    ll.remove(1)
-    ll.removeHead()
-    """
-    print('\n')
-    ll.print()
-    ll.removeTail()
-    print('\n')
-    ll.print()
-    ll.removeHead()
-    print('\n')
-    ll.print()
-    #print(ll.peek())
-    """
-
+    var = 1
+    while var == 1:
+        option = input("Choose size, peek, addHead, addTail, removeTail, removeHead, remove, print, stop: ")
+        if option == 'stop':
+            ll.print()
+            break
+        ll.user(option)
 
 if __name__ == "__main__":
     main()
