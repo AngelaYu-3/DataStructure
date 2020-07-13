@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4275fa7e-6fbe-4076-813e-14727305a272" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortedLinkedList/SortedLinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SortedLinkedList/SortedLinkedList.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,38 +137,38 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="465" y="194" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1594354198244" />
-    <state width="1348" height="195" key="GridCell.Tab.0.bottom" timestamp="1594443937344">
+    <state width="1348" height="284" key="GridCell.Tab.0.bottom" timestamp="1594609096523">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="195" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594443937344" />
-    <state width="1348" height="195" key="GridCell.Tab.0.center" timestamp="1594443937344">
+    <state width="1348" height="284" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594609096523" />
+    <state width="1348" height="284" key="GridCell.Tab.0.center" timestamp="1594609096522">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="195" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1594443937344" />
-    <state width="1348" height="195" key="GridCell.Tab.0.left" timestamp="1594443937343">
+    <state width="1348" height="284" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1594609096522" />
+    <state width="1348" height="284" key="GridCell.Tab.0.left" timestamp="1594609096521">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="195" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1594443937343" />
-    <state width="1348" height="195" key="GridCell.Tab.0.right" timestamp="1594443937344">
+    <state width="1348" height="284" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1594609096521" />
+    <state width="1348" height="284" key="GridCell.Tab.0.right" timestamp="1594609096522">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="195" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1594443937344" />
-    <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1594341876646">
+    <state width="1348" height="284" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1594609096522" />
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1594608083921">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594341876646" />
-    <state width="1348" height="281" key="GridCell.Tab.1.center" timestamp="1594341876646">
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594608083921" />
+    <state width="1348" height="281" key="GridCell.Tab.1.center" timestamp="1594608083921">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1594341876646" />
-    <state width="1348" height="281" key="GridCell.Tab.1.left" timestamp="1594341876646">
+    <state width="1348" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1594608083921" />
+    <state width="1348" height="281" key="GridCell.Tab.1.left" timestamp="1594608083921">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1594341876646" />
-    <state width="1348" height="281" key="GridCell.Tab.1.right" timestamp="1594341876646">
+    <state width="1348" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1594608083921" />
+    <state width="1348" height="281" key="GridCell.Tab.1.right" timestamp="1594608083921">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1594341876646" />
+    <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1594608083921" />
     <state x="498" y="143" key="RollbackChangesDialog" timestamp="1594421068135">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -180,5 +181,16 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="348" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1594442407893" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../SortedLinkedList/SortedLinkedList.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
