@@ -1,7 +1,5 @@
 """
 Sorted Linked List in ascending order implementation (no duplicates)
-with Node class and insert, remove header, and remove tail
-methods
 """
 
 class Node:
