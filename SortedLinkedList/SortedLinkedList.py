@@ -3,7 +3,6 @@ Sorted Linked List in ascending order implementation (no duplicates)
 with Node class and insert, remove header, and remove tail
 methods
 """
-import sys
 
 class Node:
     def __init__(self, data):
