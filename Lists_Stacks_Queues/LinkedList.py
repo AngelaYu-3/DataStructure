@@ -4,7 +4,6 @@ basic linked list implemetation:
     remove Tail & Head
     remove at a certain index
 """
-
 class Node:
     def __init__(self, data, next):
         self.data = data
@@ -88,9 +87,11 @@ class LinkedList:
     #removing from front of list
     def removeHead(self):
         if self.size == 1:
+            #data = self.head.data
             newHead = Node(None, None)
             self.head = newHead
             self.size -= 1
+            #return data
 
         elif self.size == 0:
             return None
