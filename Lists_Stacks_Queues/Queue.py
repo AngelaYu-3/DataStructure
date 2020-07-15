@@ -1,33 +1,33 @@
 """
 basic stack implementation
-    push & pop
+    queue and dequeue
 """
 
 from LinkedList import LinkedList
 
-class Stack:
+class Queue:
     ll = LinkedList()
-    def push(self,data):
+    def queue(self,data):
         self.ll.addHead(data)
         self.ll.print()
 
-    def pop(self):
-        self.ll.removeHead()
+    def dequeue(self):
+        self.ll.removeTail()
         if self.ll.size == 0:
             pass
         else:
             self.ll.print()
 
 def main():
-    s = Stack()
+    q = Queue()
     x = 1
     while x == 1:
-        user = input("Push or Pop or 'q' to quit: ")
-        if (user == 'Push') or (user == 'push'):
+        user = input("Queue or Dequeue or 'q' to quit: ")
+        if (user == 'Queue') or (user == 'queue'):
             val = int(input("Value: "))
-            s.push(val)
-        elif (user == 'Pop') or (user == 'pop'):
-            s.pop()
+            q.queue(val)
+        elif (user == 'Dequeue') or (user == 'dequeue'):
+            q.dequeue()
         elif user == 'q' or user == 'Q':
             break
         else:
@@ -35,4 +35,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
