@@ -1,5 +1,5 @@
 """
-basic stack implementation
+queue implementation
     queue and dequeue
 """
 

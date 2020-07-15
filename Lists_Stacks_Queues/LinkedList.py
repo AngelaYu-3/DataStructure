@@ -1,5 +1,5 @@
 """
-basic linked list implemetation:
+linked list implemetation:
     add Tail & Head
     remove Tail & Head
     remove at a certain index

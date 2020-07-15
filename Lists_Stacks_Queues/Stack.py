@@ -1,5 +1,5 @@
 """
-basic stack implementation
+stack implementation
     push & pop
 """
 
