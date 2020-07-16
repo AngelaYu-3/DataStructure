@@ -9,11 +9,6 @@ class Node:
         self.data = data
         self.next = next
 
-    def data(self):
-        print('getter method called')
-        return self.data
-
-
 class LinkedList:
     def __init__(self):
         self.size = 0

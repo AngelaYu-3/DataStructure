@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4275fa7e-6fbe-4076-813e-14727305a272" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Queue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CircularLinkedList/CircularLL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +50,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.Queue">
-    <configuration name="LinkedList" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.LinkedList">
+    <configuration name="LinkedList" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="LinkedList" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,7 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Queue" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Queue" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="LinkedList" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -137,10 +137,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Queue" />
         <item itemvalue="Python.Stack" />
         <item itemvalue="Python.SortedLinkedList" />
-        <item itemvalue="Python.LinkedList" />
       </list>
     </recent_temporary>
   </component>
@@ -170,6 +168,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="400" y="66" key="#LinkedList" timestamp="1594870519529">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="400" y="66" key="#LinkedList/0.0.1368.872@0.0.1368.872" timestamp="1594870519529" />
+    <state x="400" y="66" key="#Queue" timestamp="1594870439597">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="400" y="66" key="#Queue/0.0.1368.872@0.0.1368.872" timestamp="1594870439597" />
     <state x="140" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594227342230">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -182,38 +188,38 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="465" y="194" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1594354198244" />
-    <state width="1348" height="264" key="GridCell.Tab.0.bottom" timestamp="1594792122456">
+    <state width="1348" height="281" key="GridCell.Tab.0.bottom" timestamp="1594792468681">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="264" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594792122456" />
-    <state width="1348" height="264" key="GridCell.Tab.0.center" timestamp="1594792122456">
+    <state width="1348" height="281" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594792468681" />
+    <state width="1348" height="281" key="GridCell.Tab.0.center" timestamp="1594792468681">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="264" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1594792122456" />
-    <state width="1348" height="264" key="GridCell.Tab.0.left" timestamp="1594792122456">
+    <state width="1348" height="281" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1594792468681" />
+    <state width="1348" height="281" key="GridCell.Tab.0.left" timestamp="1594792468681">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="264" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1594792122456" />
-    <state width="1348" height="264" key="GridCell.Tab.0.right" timestamp="1594792122456">
+    <state width="1348" height="281" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1594792468681" />
+    <state width="1348" height="281" key="GridCell.Tab.0.right" timestamp="1594792468681">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="264" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1594792122456" />
-    <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1594791286203">
+    <state width="1348" height="281" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1594792468681" />
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1594792468682">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594791286203" />
-    <state width="1348" height="281" key="GridCell.Tab.1.center" timestamp="1594791286202">
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1594792468682" />
+    <state width="1348" height="281" key="GridCell.Tab.1.center" timestamp="1594792468681">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1594791286202" />
-    <state width="1348" height="281" key="GridCell.Tab.1.left" timestamp="1594791286202">
+    <state width="1348" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1594792468681" />
+    <state width="1348" height="281" key="GridCell.Tab.1.left" timestamp="1594792468681">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1594791286202" />
-    <state width="1348" height="281" key="GridCell.Tab.1.right" timestamp="1594791286203">
+    <state width="1348" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1594792468681" />
+    <state width="1348" height="281" key="GridCell.Tab.1.right" timestamp="1594792468681">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1594791286203" />
+    <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1594792468681" />
     <state x="498" y="143" key="RollbackChangesDialog" timestamp="1594421068135">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
