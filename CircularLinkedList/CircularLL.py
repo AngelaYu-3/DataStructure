@@ -18,6 +18,7 @@ class CircularLL:
             curr = self.tail.next
             while(True):
                 print(curr.data)
+                #statements here prevent circular print--stop when one circ is made
                 curr = curr.next
                 if curr == self.tail.next:
                     break
