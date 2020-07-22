@@ -69,12 +69,6 @@ class CircularLL:
                     self.tail = ntail
                     break
 
-
-
-
-
-
-
 def main():
     cll = CircularLL()
     while(True):
