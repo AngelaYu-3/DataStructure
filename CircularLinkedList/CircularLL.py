@@ -48,16 +48,42 @@ class CircularLL:
                 self.tail.next = head.next
                 head.next = None
 
+    def reverse(self):
+        if self.tail is None:
+            pass
+        else:
+            curr = self.tail.next
+            point = self.tail
+            while(True):
+                next = curr.next
+                npoint = curr
+                curr.next = point
+                point = npoint
+                curr = next
+                if next == self.tail.next:
+                    self.tail = self.tail.next
+                    break
+
+
+
+
+
+
+
 def main():
     cll = CircularLL()
     while(True):
-        user = input("insert, remove, or quit: ")
+        user = input("insert, remove, reverse, or quit: ")
         if user == 'insert':
             value = int(input('Value: '))
             cll.insert(value)
             cll.print()
+            #print(cll.tail.data)
         elif user == 'remove':
             cll.remove()
+            cll.print()
+        elif user == 'reverse':
+            cll.reverse()
             cll.print()
         elif user == 'quit':
             break
