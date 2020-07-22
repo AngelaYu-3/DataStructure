@@ -1,6 +1,8 @@
 """
-circular linked list
-      -add method for a reversed circular linked list
+circular linked list--(queue)
+      insert(): adds node to tail
+      remove(): removes node from head
+      reverse(): reverses direc of circular linked list
 """
 class Node:
     def __init__(self, data):
@@ -54,14 +56,17 @@ class CircularLL:
         else:
             curr = self.tail.next
             point = self.tail
+            ntail = self.tail.next
             while(True):
                 next = curr.next
                 npoint = curr
                 curr.next = point
+                #print(curr.data)
                 point = npoint
                 curr = next
-                if next == self.tail.next:
-                    self.tail = self.tail.next
+                #print(curr.data)
+                if next == ntail:
+                    self.tail = ntail
                     break
 
 
