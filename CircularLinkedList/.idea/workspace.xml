@@ -102,45 +102,45 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1348" height="227" key="GridCell.Tab.0.bottom" timestamp="1595438402027">
+    <state width="1334" height="227" key="GridCell.Tab.0.bottom" timestamp="1595479332867">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1595438402027" />
-    <state width="1348" height="227" key="GridCell.Tab.0.center" timestamp="1595438402027">
+    <state width="1334" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1595479332867" />
+    <state width="1334" height="227" key="GridCell.Tab.0.center" timestamp="1595479332867">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1595438402027" />
-    <state width="1348" height="227" key="GridCell.Tab.0.left" timestamp="1595438402027">
+    <state width="1334" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1595479332867" />
+    <state width="1334" height="227" key="GridCell.Tab.0.left" timestamp="1595479332867">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1595438402027" />
-    <state width="1348" height="227" key="GridCell.Tab.0.right" timestamp="1595438402027">
+    <state width="1334" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1595479332867" />
+    <state width="1334" height="227" key="GridCell.Tab.0.right" timestamp="1595479332867">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1595438402027" />
-    <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1595438214804">
+    <state width="1334" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1595479332867" />
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1595439830846">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1595438214804" />
-    <state width="1348" height="281" key="GridCell.Tab.1.center" timestamp="1595438214804">
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1595439830846" />
+    <state width="1348" height="281" key="GridCell.Tab.1.center" timestamp="1595439830846">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1595438214804" />
-    <state width="1348" height="281" key="GridCell.Tab.1.left" timestamp="1595438214804">
+    <state width="1348" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1595439830846" />
+    <state width="1348" height="281" key="GridCell.Tab.1.left" timestamp="1595439830846">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1595438214804" />
-    <state width="1348" height="281" key="GridCell.Tab.1.right" timestamp="1595438214804">
+    <state width="1348" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1595439830846" />
+    <state width="1348" height="281" key="GridCell.Tab.1.right" timestamp="1595439830846">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1595438214804" />
+    <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1595439830846" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/CircularLL.py</url>
-          <line>89</line>
+          <line>83</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

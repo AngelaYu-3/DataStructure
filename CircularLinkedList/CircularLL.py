@@ -55,18 +55,18 @@ class CircularLL:
             pass
         else:
             curr = self.tail.next
-            point = self.tail
             ntail = self.tail.next
+            point = self.tail
             while(True):
-                next = curr.next
-                npoint = curr
-                curr.next = point
+                next = curr.next      #remembers node after curr so can progress thru list after curr.next is changed
+                npoint = curr         #used to progress point
+                curr.next = point     #taking curr.next and reversing it to point to the Node behind curr
                 #print(curr.data)
-                point = npoint
-                curr = next
+                point = npoint        #progressing point forwards by one
+                curr = next           #progressing curr forwards by one
                 #print(curr.data)
-                if next == ntail:
-                    self.tail = ntail
+                if next == ntail:      #if curr.next before reversal is equal to the initial head, one loop has been made so break
+                    self.tail = ntail  #set new tail as what was the old head
                     break
 
 def main():
