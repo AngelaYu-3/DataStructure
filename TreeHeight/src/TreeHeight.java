@@ -1,21 +1,46 @@
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
+
 
 public class TreeHeight {
-	Scanner in = new Scanner(System.in);
+	class FastScanner {
+		StringTokenizer tok = new StringTokenizer("");
+		BufferedReader in;
+
+		FastScanner() {
+			in = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		String next() throws IOException {
+			while (!tok.hasMoreElements())
+				tok = new StringTokenizer(in.readLine());
+			return tok.nextToken();
+		}
+		int nextInt() throws IOException {
+			return Integer.parseInt(next());
+		}
+	}
 	
-	public TreeHeight() {
-		System.out.print("Enter in an integer (n) for number of nodes: ");
-		int nodesNum = in.nextInt();
-		System.out.print("Enter order of tree using values -1 to n-1 to represent the structure of the tree: ");
-		String order = in.next();
+	public class height {
+		int n;
+		int parent[];
 		
-		int[] nodes = new int[nodesNum];
-		//for loop to place order string (indiv int) into created array
+		void read() throws IOException {
+			FastScanner in = new FastScanner();
+			n = in.nextInt();
+			parent = new int[n];
+			for (int i = 0; i < n; i++) {
+				parent[i] = in.nextInt();
+			}
+		}
+		
+		int computeHeight() {
+		    	
+		}
+
+     }
+	
+	static public void main(String[] args) throws IOException {
+		
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
