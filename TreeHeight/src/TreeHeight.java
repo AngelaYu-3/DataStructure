@@ -24,6 +24,7 @@ public class TreeHeight {
 	public class height {
 		int n;
 		int parent[];
+		int leaf[];
 		
 		void read() throws IOException {
 			FastScanner in = new FastScanner();
@@ -34,13 +35,30 @@ public class TreeHeight {
 			}
 		}
 		
-		int computeHeight() {
-		    	
+		void computeHeight() {
+			//checking which values are leaves
+		    leaf = new int[n];
+		    for( int i = 0; i < n; i++) {
+		    	boolean check = Arrays.asList(parent).contains(i);
+		    	if (check == true){
+		    	   leaf[i] = 0;	
+		    	}
+		    	else {
+		    		leaf[i] = 1;
+		    	}
+		    }
+		    System.out.println(Arrays.toString(parent));
+		    System.out.println(Arrays.toString(leaf));
+		    
 		}
 
      }
 	
 	static public void main(String[] args) throws IOException {
+		TreeHeight test = new TreeHeight();
+		height test1 = test.new height(); //?
+		test1.computeHeight();
+		
 		
 	}
 }
