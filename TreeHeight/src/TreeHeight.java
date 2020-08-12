@@ -32,33 +32,71 @@ public class TreeHeight {
 			parent = new int[n];
 			for (int i = 0; i < n; i++) {
 				parent[i] = in.nextInt();
+			    //System.out.println(Arrays.toString(parent));
 			}
 		}
 		
-		void computeHeight() {
+		//checking if value in array
+		boolean useLoop(int[] arr, int i) {
+			for(int s: arr){
+				if(s == i)
+					return true;
+			}
+			return false;
+		}
+		
+		int computeHeight() {
 			//checking which values are leaves
 		    leaf = new int[n];
+		    ArrayList<Integer> height = new ArrayList<>();
+		    
 		    for( int i = 0; i < n; i++) {
-		    	boolean check = Arrays.asList(parent).contains(i);
-		    	if (check == true){
-		    	   leaf[i] = 0;	
+		    	boolean check = useLoop(parent, i);
+		    	//System.out.println(check);
+		    	if (check == false){
+		    	   leaf[i] = 1;	//there is a leaf
 		    	}
 		    	else {
-		    		leaf[i] = 1;
+		    	   leaf[i] = 0; //no leaf
 		    	}
 		    }
-		    System.out.println(Arrays.toString(parent));
-		    System.out.println(Arrays.toString(leaf));
+		    //System.out.println(Arrays.toString(leaf));
+		    
+		    //finding height from each leaf
+		    for(int i = 0; i < n; i++) {
+		    	if(leaf[i] == 1) {
+		    	   int h = 0;
+		    	   for(int j = i; j != -1; j = parent[j]) {
+		    	       h++;   
+		    	   }
+		    	   height.add(h);
+		    	}
+		    	else {
+		    		continue;
+		    	}
+		    	
+		    	
+		    }
+		    /*for(int x = 0; x < height.size(); x++) {
+	    	    System.out.println(height.get(x));	
+	    	}*/
+		    
+		    //finding max height from all leaf heights
+		    int maxHeight = 0;
+		    for(int i = 0; i < height.size(); i++) {
+		        int max = Math.max(maxHeight, height.get(i));
+		        maxHeight = max;
+		    }
+		    //System.out.println(maxHeight);
+		    return maxHeight;
 		    
 		}
 
      }
 	
-	static public void main(String[] args) throws IOException {
-		TreeHeight test = new TreeHeight();
-		height test1 = test.new height(); //?
-		test1.computeHeight();
-		
-		
-	}
-}
+static public void main(String[] args) throws IOException {
+	TreeHeight test = new TreeHeight();
+	height test1 = test.new height(); 
+	test1.read();
+	System.out.println(test1.computeHeight());
+	}}
