@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 
-public class TreeHeight {
+public class TreeHeight1 {
 	class FastScanner {
 		StringTokenizer tok = new StringTokenizer("");
 		BufferedReader in;
@@ -95,7 +95,7 @@ public class TreeHeight {
      }
 	
 static public void main(String[] args) throws IOException {
-	TreeHeight test = new TreeHeight();
+	TreeHeight1 test = new TreeHeight1();
 	height test1 = test.new height(); 
 	test1.read();
 	System.out.println(test1.computeHeight());
