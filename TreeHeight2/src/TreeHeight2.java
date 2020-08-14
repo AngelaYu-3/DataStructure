@@ -22,18 +22,14 @@ public class TreeHeight2 {
 	}
 	
 	class Node {
-		Node childL;
-		Node childR;
+		Node parent;
 		int data;
+		boolean internal;
 		
 		Node(int data){	
 			this.data = data;
-			this.childL = null;
-			this.childR = null;
-		}
-		
-		void child(Node node) {
-		    node ;	
+			this.parent = null;
+			this.internal = false;
 		}
 	}
 	
@@ -67,61 +63,60 @@ public class TreeHeight2 {
 		    	System.out.println(tree[i].data);
 		    }*/
 		    
-		    //linking tree[] child pointer
+		    //linking tree[] parent pointer
 		    for(int i = 0; i < n; i++) {
 		    	int p = parent[i];	
-		    	if (p == -1){
-		    		root = tree[i];
-		    	}
-		    	else {
-		    		
-		    		if(tree[p].childL == null) {
-		    			tree[p].childL = tree[i];
-		    		}
-		    		else {
-		    			tree[p].childR = tree[i];
-		    		}		    			
+		    	
+		    	if(p != -1) {
+		    		tree[i].parent = tree[p];
+		    		tree[p].internal = true;
 		    	}		    	
 		    }
 		    
-		    //printing tree with left and right children
-		    for(int i = 0; i < n; i++) {
-		    	//-1 means no children
-		    	int left = -1;
-		    	int right = -1;
-		    	if(tree[i].childL != null) {
-		    		left = tree[i].childL.data;
+		    //printing tree with parent
+		    /*for(int i = 0; i < n; i++) {
+		    	if(tree[i].parent != null) {
+		    		System.out.println(tree[i].data + " P: " + tree[i].parent.data);
 		    	}
-		    	if(tree[i].childR != null) {
-		    		right = tree[i].childR.data;
-		    	} 		
-		    	System.out.println(tree[i].data + " L: " + left + " R: " + right);		    	
+		    	else {
+		    		System.out.println(tree[i].data + " P: " + "null");
+		    	}
 		    }
+		    
+		    //printing leaves
+		    for(int i = 0; i < n; i++) {
+		    	if(tree[i].internal == false) {
+		    		System.out.println(tree[i].data);
+		    	}
+		    }*/
 		}
 		
 		int maxHeight = 1;
 		int height = 1;
+		int helperCompHeight(Node leaf) {
+			Node x = leaf;
+			while(x.parent != null) {
+				//System.out.print("2");
+				height++;
+				x = x.parent;
+			}
+		    return height;
+		    //while()	       
+		}
 		
-		int computeHeight(Node x) {	
-			if(x.childL == null && x.childR == null) {
-				//System.out.println(height);
-			    maxHeight = Math.max(maxHeight, height); 
+		int computeHeight() {
+			for(int i = 0; i < n; i++) {
+				if(tree[i].internal == false) {
+					height = 1;
+					int pHeight = helperCompHeight(tree[i]);
+					maxHeight = Math.max(pHeight, maxHeight);
+				}
+				else {
+					continue;
+				}
 			}
-			else {
-			   height++;
-			   //System.out.println(height);
-			   if(x.childL != null) {
-				  computeHeight(x.childL);  
-			   }
-			   if(x.childR != null) {
-				  computeHeight(x.childR);  
-			   }
-			   //height = 1;
-			   
-			}
-		    return maxHeight;
-		    //while()
-		       
+			
+			return maxHeight;
 		}
 
      }
@@ -131,6 +126,7 @@ static public void main(String[] args) throws IOException {
 	height test2 = test.new height(); 
 	test2.read();
 	test2.tree();
-	System.out.println(test2.computeHeight(test2.root));
+	System.out.println(test2.computeHeight());
 	}}
+
 
