@@ -24,12 +24,12 @@ public class TreeHeight2 {
 	class Node {
 		Node parent;
 		int data;
-		boolean internal;
+		boolean isLeaf;
 		
 		Node(int data){	
 			this.data = data;
 			this.parent = null;
-			this.internal = false;
+			this.isLeaf = false;
 		}
 	}
 	
@@ -43,20 +43,22 @@ public class TreeHeight2 {
 			FastScanner in = new FastScanner();
 			n = in.nextInt();
 			parent = new int[n];
+			tree = new Node[n];
 			for (int i = 0; i < n; i++) {
-				parent[i] = in.nextInt();
+				parent[i] = in.nextInt();	
+				Node node = new Node(i);
+				tree[i] = node;
 			    //System.out.println(Arrays.toString(parent));
 			}
 		}
 		
 		void tree() {
 			//creating array with nodes
-			tree = new Node[n];
-		    for(int i = 0; i < n; i++) {
+		    /*for(int i = 0; i < n; i++) {
 		       int data = i;
 		       Node node = new Node(data);
 		       tree[i] = node;
-		    }
+		    }*/
 		    
 		    //printing values of tree
 		    /*for(int i = 0; i < n; i++) {
@@ -69,7 +71,7 @@ public class TreeHeight2 {
 		    	
 		    	if(p != -1) {
 		    		tree[i].parent = tree[p];
-		    		tree[p].internal = true;
+		    		tree[p].isLeaf = true;
 		    	}		    	
 		    }
 		    
@@ -106,7 +108,7 @@ public class TreeHeight2 {
 		
 		int computeHeight() {
 			for(int i = 0; i < n; i++) {
-				if(tree[i].internal == false) {
+				if(tree[i].isLeaf == false) {
 					height = 1;
 					int pHeight = helperCompHeight(tree[i]);
 					maxHeight = Math.max(pHeight, maxHeight);
