@@ -71,11 +71,11 @@ public class TreeHeight2 {
 		    	}
 		    	else {
 		    		
-		    		if(tree[p].childL != null) {
-		    			tree[p].childR = tree[i];
+		    		if(tree[p].childL == null) {
+		    			tree[p].childL = tree[i];
 		    		}
 		    		else {
-		    			tree[p].childL = tree[i];
+		    			tree[p].childR = tree[i];
 		    		}		    			
 		    	}		    	
 		    }
@@ -99,17 +99,21 @@ public class TreeHeight2 {
 		int height = 1;
 		
 		int computeHeight(Node x) {	
-			System.out.print("a");
 			if(x.childL == null && x.childR == null) {
-				System.out.print("b");
 				//System.out.println(height);
 			    maxHeight = Math.max(maxHeight, height); 
 			}
 			else {
 			   height++;
-			   computeHeight(x.childL);
+			   //System.out.println(height);
+			   if(x.childL != null) {
+				  computeHeight(x.childL);  
+			   }
+			   if(x.childR != null) {
+				  computeHeight(x.childR);  
+			   }
 			   //height = 1;
-			   computeHeight(x.childR);
+			   
 			}
 		    return maxHeight;
 		    //while()
