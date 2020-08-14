@@ -31,6 +31,10 @@ public class TreeHeight2 {
 			this.childL = null;
 			this.childR = null;
 		}
+		
+		void child(Node node) {
+		    node ;	
+		}
 	}
 	
 	public class height {
