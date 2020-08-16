@@ -29,7 +29,7 @@ public class TreeHeight2 {
 		Node(int data){	
 			this.data = data;
 			this.parent = null;
-			this.isLeaf = false;
+			this.isLeaf = true;
 		}
 	}
 	
@@ -71,7 +71,7 @@ public class TreeHeight2 {
 		    	
 		    	if(p != -1) {
 		    		tree[i].parent = tree[p];
-		    		tree[p].isLeaf = true;
+		    		tree[p].isLeaf = false;
 		    	}		    	
 		    }
 		    
@@ -97,6 +97,7 @@ public class TreeHeight2 {
 		int height = 1;
 		int helperCompHeight(Node leaf) {
 			Node x = leaf;
+			height = 1;
 			while(x.parent != null) {
 				//System.out.print("2");
 				height++;
@@ -108,8 +109,7 @@ public class TreeHeight2 {
 		
 		int computeHeight() {
 			for(int i = 0; i < n; i++) {
-				if(tree[i].isLeaf == false) {
-					height = 1;
+				if(tree[i].isLeaf == true) {
 					int pHeight = helperCompHeight(tree[i]);
 					maxHeight = Math.max(pHeight, maxHeight);
 				}
