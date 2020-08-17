@@ -174,6 +174,7 @@ static public void main(String[] args) throws IOException {
 	now = LocalTime.now();
     System.out.println(now);
 	System.out.println(test2.computeHeight());
+	
 	now = LocalTime.now();
     System.out.println(now);
     System.out.println(test2.numLeaf);
