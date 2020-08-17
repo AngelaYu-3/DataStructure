@@ -1,8 +1,9 @@
 import java.util.*;
+import java.time.LocalTime;
 import java.io.*;
 
-
 public class TreeHeight2 {
+	
 	class FastScanner {
 		StringTokenizer tok = new StringTokenizer("");
 		BufferedReader in;
@@ -25,21 +26,25 @@ public class TreeHeight2 {
 		Node parent;
 		int data;
 		boolean isLeaf;
+		int nodeHeight;
 		
 		Node(int data){	
 			this.data = data;
 			this.parent = null;
 			this.isLeaf = true;
+			this.nodeHeight = 0;
 		}
 	}
 	
 	public class height {
 		int n;
 		int parent[];
+		int numLeaf = 0;
 		Node tree[];
-		Node root;
 		
 		void read() throws IOException {
+			//FastScanner in = new FastScanner();
+			//n = in.nextInt();
 			FastScanner in = new FastScanner();
 			n = in.nextInt();
 			parent = new int[n];
@@ -50,7 +55,31 @@ public class TreeHeight2 {
 				tree[i] = node;
 			    //System.out.println(Arrays.toString(parent));
 			}
-		}
+			
+			//testing harder cases--reading files
+			/*int i = 0;
+			 try {
+			      File myObj = new File("23.txt");
+			      Scanner myReader = new Scanner(myObj);
+			      while (myReader.hasNextLine()) {
+			        String data = myReader.nextLine();
+			        String[] arr = data.split(" ");
+			        for(String a : arr) {
+			        	int x = Integer.parseInt(a);	
+						parent[i] = x;	
+						Node node = new Node(i);
+						tree[i] = node;
+						i++;		        	
+			        }
+			        //System.out.println(data);
+			      }
+			      myReader.close();
+			    } catch (FileNotFoundException e) {
+			      System.out.println("An error occurred.");
+			      e.printStackTrace();
+			    }			
+			    //System.out.println(Arrays.toString(parent));*/
+			}
 		
 		void tree() {
 			//creating array with nodes
@@ -102,6 +131,12 @@ public class TreeHeight2 {
 				//System.out.print("2");
 				height++;
 				x = x.parent;
+				if(height <= x.nodeHeight) {
+					break;
+				}
+				else {
+					x.nodeHeight = height;
+				}
 			}
 		    return height;
 		    //while()	       
@@ -110,6 +145,7 @@ public class TreeHeight2 {
 		int computeHeight() {
 			for(int i = 0; i < n; i++) {
 				if(tree[i].isLeaf == true) {
+					numLeaf++;
 					int pHeight = helperCompHeight(tree[i]);
 					maxHeight = Math.max(pHeight, maxHeight);
 				}
@@ -124,11 +160,24 @@ public class TreeHeight2 {
      }
 	
 static public void main(String[] args) throws IOException {
+	LocalTime now = LocalTime.now();
+    System.out.println(now);
+    
 	TreeHeight2 test = new TreeHeight2();
 	height test2 = test.new height(); 
+	
 	test2.read();
+	now = LocalTime.now();
+    System.out.println(now);
+    
 	test2.tree();
+	now = LocalTime.now();
+    System.out.println(now);
 	System.out.println(test2.computeHeight());
-	}}
+	now = LocalTime.now();
+    System.out.println(now);
+    System.out.println(test2.numLeaf);
+	}
+}
 
 
