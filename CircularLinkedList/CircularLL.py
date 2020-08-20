@@ -69,6 +69,7 @@ class CircularLL:
                     self.tail = ntail  #set new tail as what was the old head
                     break
 
+
 def main():
     cll = CircularLL()
     while(True):
