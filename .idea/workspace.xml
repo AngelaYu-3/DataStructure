@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed4b5d38-2fa1-44bc-9e34-9d318cd6ff72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickSort/QuickSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuickSort/QuickSort.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
