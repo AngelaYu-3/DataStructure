@@ -9,7 +9,8 @@ class QuickSort:
 
     def sort(self):
         length = len(list_data)
-        print(length)
+        pivot = list_data[length - 1]
+        print(pivot)
 
 def main():
    quickSort = QuickSort()
