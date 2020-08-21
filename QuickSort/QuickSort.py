@@ -11,23 +11,25 @@ class QuickSort:
         self.list_data[index1] = self.list_data[index2]
         self.list_data[index2] = data1
 
-    #logic wrong here!!--35 33 42 10 14 19 27 44 26 31
-    def partition(self, low, pivot_index):
+    #logic wrong here!!--[35 33 42 10 14 19 27 44 26 31]
+    def partition(self, low, high):
         i = low - 1
-        pivot = self.list_data[pivot_index]
-        for j in range(low, pivot_index):
-            if self.list_data[j] < pivot:
+        pivot = self.list_data[high]
+
+        for j in range(low, high):
+            if self.list_data[j] <= pivot:
                 i += 1
                 self.switch(i, j)
                 print(self.list_data)
 
         i += 1
-        self.switch(i, pivot_index)
+        self.switch(i, high)
         #print(self.list_data)
         return i
 
     def sort(self, low, high):
-        mid = self.partition(low, self.length - 1)
+        mid = self.partition(low, high)
+        print(mid)
         self.partition(low, mid - 1)
         print("LEFT")
         print(self.list_data)
