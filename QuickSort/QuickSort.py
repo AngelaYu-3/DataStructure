@@ -1,50 +1,53 @@
 class QuickSort:
 
-    def __init__(self, data):
+    def __init__(self):
+        data_in = str(input("Enter in integers separated by spaces to sort: "))
+        data_split = data_in.split()
+        data = map(int, data_split)
         self.list_data = list(data)
         self.length = len(self.list_data)
-        #print(self.list_data)
-        #print(self.length)
 
     def switch(self, index1, index2):
         data1 = self.list_data[index1]
         self.list_data[index1] = self.list_data[index2]
         self.list_data[index2] = data1
 
-    #logic wrong here!!--[35 33 42 10 14 19 27 44 26 31]
-    def partition(self, low, high):
-        i = low - 1
-        pivot = self.list_data[high]
-
-        for j in range(low, high):
-            if self.list_data[j] <= pivot:
-                i += 1
-                self.switch(i, j)
-                print(self.list_data)
-
-        i += 1
-        self.switch(i, high)
-        #print(self.list_data)
-        return i
-
     def sort(self, low, high):
-        mid = self.partition(low, high)
-        print(mid)
-        self.partition(low, mid - 1)
-        print("LEFT")
-        print(self.list_data)
+        length = high - low + 1
+        pivot = self.list_data[high]
+        i = low
+        j = low
 
-        self.partition(mid + 1, high)
-        print("RIGHT")
-        print(self.list_data)
+        if length == 1:
+            return self.list_data
 
+        else:
+            while j != high:
+                if self.list_data[j] <= pivot:
+                    if i == j:
+                        i += 1
+                        j += 1
+                    else:
+                        self.switch(i, j)
+                        i += 1
+                        j += 1
+
+                else:
+                    j += 1
+
+        self.switch(i, j)
+
+        if i > low:
+            self.sort(low, i - 1)
+
+        if i < high:
+            self.sort(i + 1, high)
+
+        return self.list_data
 
 def main():
-    data_in = str(input("Enter in integers separated by spaces to sort: "))
-    data_split = data_in.split()
-    data = map(int, data_split)
-    quick_sort = QuickSort(data)
-    quick_sort.sort(0, quick_sort.length - 1)
+    quick_sort = QuickSort()
+    print(quick_sort.sort(0, (quick_sort.length - 1)))
 
 
 if __name__ == "__main__":
