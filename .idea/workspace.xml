@@ -22,6 +22,7 @@
     <list default="true" id="ed4b5d38-2fa1-44bc-9e34-9d318cd6ff72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NetworkPacket/circularQueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkPacket/circularQueue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkPacket/process_package.py" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkPacket/process_package.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,22 +111,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="195" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1598318298344" />
-    <state width="1348" height="256" key="GridCell.Tab.0.bottom" timestamp="1598383537833">
+    <state width="1348" height="256" key="GridCell.Tab.0.bottom" timestamp="1598388849627">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="256" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1598383537833" />
-    <state width="1348" height="256" key="GridCell.Tab.0.center" timestamp="1598383537832">
+    <state width="1348" height="256" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1598388849627" />
+    <state width="1348" height="256" key="GridCell.Tab.0.center" timestamp="1598388849627">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="256" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1598383537832" />
-    <state width="1348" height="256" key="GridCell.Tab.0.left" timestamp="1598383537832">
+    <state width="1348" height="256" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1598388849627" />
+    <state width="1348" height="256" key="GridCell.Tab.0.left" timestamp="1598388849627">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="256" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1598383537832" />
-    <state width="1348" height="256" key="GridCell.Tab.0.right" timestamp="1598383537832">
+    <state width="1348" height="256" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1598388849627" />
+    <state width="1348" height="256" key="GridCell.Tab.0.right" timestamp="1598388849627">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="256" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1598383537832" />
+    <state width="1348" height="256" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1598388849627" />
     <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1598318508307">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -142,13 +143,17 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1598318508307" />
+    <state x="716" y="0" width="655" height="877" maximized="true" key="dock-window-1" timestamp="1598389337306">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="716" y="0" width="655" height="877" maximized="true" key="dock-window-1/0.0.1368.872@0.0.1368.872" timestamp="1598389337306" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/NetworkPacket/circularQueue.py</url>
-          <line>56</line>
+          <line>65</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -1,5 +1,5 @@
 from collections import namedtuple
-from queue import Queue
+from NetworkPacket import circularQueue
 
 Request = namedtuple("Request", ["arrived_at", "time_to_process"])
 Response = namedtuple("Response", ["was_dropped", "started_at"])
@@ -12,20 +12,22 @@ class Node:
 class Buffer:
     def __init__(self, size):
         self.size = size
-        self.buffer = Queue(maxsize = self.size)
-        self.tail = Node(None, None)
-        self.head = Node(None, None)
+        self.buffer = circularQueue.CircularQueue(self.size)
+        self.head = self.tail = Node(None, None)
 
     global time
     time = 0
     def process(self, request):
         # write your code here
-        if time == request.arrived_at:
-            if self.buffer.empty() is True:
-                self.buffer.append(Node(request.time_to_process, request.time_to_process + time))
-                time += 1
-            else:
-                while request.arrived_at
+        while True:
+            if time == self.buffer[self.head.finish_time]:
+
+            if time == request.arrived_at:
+                if self.buffer.empty() is True:
+                    self.buffer.queue(Node(request.time_to_process, request.time_to_process + time))
+                    time += 1
+                else:
+
 
         time += 1
 
