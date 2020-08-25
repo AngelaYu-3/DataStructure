@@ -64,20 +64,18 @@ def main():
         if user == "enqueue":
             data = int(input("data value: "))
             test.enqueue(data)
-            print(test.empty())
-            #print("Tail: {} Head: {}".format(test.tail, test.head))
             test.print()
         elif user == "dequeue":
             print("Removed: {}".format(test.dequeue()))
-            #print("Tail: {} Head: {}".format(test.tail, test.head))
             test.print()
-            print(test.empty())
         elif user == "get":
             index = int(input("index: "))
             print(test.__getitem__(index))
-        else:
-            #test.print()
+        elif user == "exit":
+            test.print()
             exit()
+        else:
+            continue
 
 if __name__ == "__main__":
     main()
