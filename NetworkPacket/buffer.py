@@ -1,4 +1,4 @@
-class CircularQueue():
+class Buffer():
 
     def __init__(self, size):
         self.size = size
@@ -36,6 +36,12 @@ class CircularQueue():
         else:
             return False
 
+    def full(self):
+        if(self.tail + 1) % self.size == self.head:
+            return True
+        else:
+            return False
+
     def __getitem__(self, item):
         return self.queue[item]
 
@@ -56,7 +62,7 @@ class CircularQueue():
 
 def main():
     size = int(input("Size of queue: "))
-    test = CircularQueue(size)
+    test = Buffer(size)
 
     while True:
         user = input("enqueue, dequeue, get, or exit: ")
