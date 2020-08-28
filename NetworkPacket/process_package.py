@@ -1,6 +1,7 @@
 # python3
 
 from collections import namedtuple
+from CircularQueue import circularQueue
 
 Request = namedtuple("Request", ["arrived_at", "time_to_process"])
 Response = namedtuple("Response", ["was_dropped", "started_at"])
@@ -13,30 +14,29 @@ class Node:
 class Buffer:
     def __init__(self, size):
         self.size = size
-        self.finish = []
+        self.finish = circularQueue.CircularQueue(self.size)
 
     def process(self, request):
         #popping values--done processing by the time new value arrives
-        while len(self.finish) > 0 and self.finish[0] <= request.arrived_at:
-            self.finish.pop(0)
+        while self.finish.empty() is False and self.finish.peek() <= request.arrived_at:
+            self.finish.dequeue()
 
         #buffer not full
-        if len(self.finish) < self.size:
-
+        if self.finish.full() is False:
             #buffer empty
-            if len(self.finish) == 0:
+            if self.finish.empty() is True:
                 # finish_time: arrival_time + finish_time
                 # start_time: arrival_time
-                self.finish.append(request.arrived_at + request.time_to_process)
+                self.finish.enqueue(request.arrived_at + request.time_to_process)
                 return Response(False, request.arrived_at)
             #buffer has values
             else:
                 # finish_time: process_time + finish_time of previous index
                 # start_time: finish_time of previous index
-                curr_index = len(self.finish) - 1
+                curr_index = self.finish.tail
                 finish_time = self.finish[curr_index] + request.time_to_process
                 started_at = self.finish[curr_index]
-                self.finish.append(finish_time)
+                self.finish.enqueue(finish_time)
                 return Response(False, started_at)
 
         #buffer full

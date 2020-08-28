@@ -2,7 +2,7 @@ class CircularQueue():
 
     def __init__(self, size):
         self.size = size
-        self.queue = [None for i in range(size)]
+        self.queue = [0 for __ in range(size)]
         self.head = -1
         self.tail = -1
 
@@ -36,8 +36,17 @@ class CircularQueue():
         else:
             return False
 
+    def full(self):
+        if (self.tail + 1) % self.size == self.head:
+            return True
+        else:
+            return False
+
     def __getitem__(self, item):
         return self.queue[item]
+
+    def peek(self):
+        return self.queue[self.head]
 
     def print(self):
         if self.tail > self.head:
