@@ -1,6 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
+//hello
 public class insertionSort {
 	
     public void sort(int[] x) {
@@ -9,11 +10,11 @@ public class insertionSort {
             int possibleIndex = i;
             int temp = x[i];
             
-            while((possibleIndex > 0) && (temp < x[i - 1])) {
+            while(temp < x[i - 1]) {
             	x[i] = x[i - 1];
+            	x[possibleIndex] = temp;
             	possibleIndex--;
             }
-            x[possibleIndex] = temp;
         }
         
         System.out.println("Insertion Sort: " + Arrays.toString(x));
