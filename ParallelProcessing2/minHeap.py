@@ -1,6 +1,6 @@
 # python3
 
-class MaxHeap:
+class MinHeap:
     def __init__(self, max_len):
         self.max_len = max_len
         self.heap = []
@@ -15,7 +15,7 @@ class MaxHeap:
 
         if length < self.max_len:
             self.heap.insert(length, value)
-            while self.heap[p] < self.heap[curr]:
+            while self.heap[p] > self.heap[curr]:
                 self.heap[p], self.heap[curr] = self.heap[curr], self.heap[p]
                 if p == 0:
                     break
@@ -26,9 +26,9 @@ class MaxHeap:
                     curr = p
                     p = int((p - 1) / 2)
 
-    def extract_max(self):
+    def extract_min(self):
         root = 0
-        largest = root
+        smallest = root
         l = (2 * root) + 1
         r = (2 * root) + 2
 
@@ -38,28 +38,28 @@ class MaxHeap:
         self.heap[0], self.heap[swap] = self.heap[swap], self.heap[0]
         self.heap.pop(swap)
 
-        if l < len(self.heap) and self.heap[l] > self.heap[largest]:
-            largest = l
-        if r < len(self.heap) and self.heap[r] > self.heap[largest]:
-            largest = r
+        if l < len(self.heap) and self.heap[l] < self.heap[smallest]:
+            smallest = l
+        if r < len(self.heap) and self.heap[r] < self.heap[smallest]:
+            smallest = r
 
-        if largest == 0:
+        if smallest == 0:
             pass
         else:
-            while self.heap[largest] > self.heap[root]:
-                self.heap[root], self.heap[largest] = self.heap[largest], self.heap[root]
-                root = largest
+            while self.heap[smallest] < self.heap[root]:
+                self.heap[root], self.heap[smallest] = self.heap[smallest], self.heap[root]
+                root = smallest
                 l = (2 * root) + 1
                 r = (2 * root) + 2
 
-                if l < len(self.heap) and self.heap[l] > self.heap[largest]:
-                    largest = l
-                if r < len(self.heap) and self.heap[r] > self.heap[largest]:
-                    largest = r
+                if l < len(self.heap) and self.heap[l] < self.heap[smallest]:
+                    smallest = l
+                if r < len(self.heap) and self.heap[r] < self.heap[smallest]:
+                    smallest = r
 
         return(max_val)
 
-    def get_max(self):
+    def get_min(self):
         return(self.heap[0])
 
 
@@ -68,17 +68,17 @@ def main():
     test = MaxHeap(m)
 
     while True:
-        user = input("insert, max, get: ")
+        user = input("insert, min, get: ")
 
         if user == 'insert':
             value = int(input("value: "))
             test.insert(value)
             print(test.heap)
         elif user == "get":
-            print(test.get_max())
+            print(test.get_min())
             print(test.heap)
-        elif user == 'max':
-            print(test.extract_max())
+        elif user == 'min':
+            print(test.extract_min())
             print(test.heap)
         else:
             exit()
