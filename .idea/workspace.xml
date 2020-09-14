@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ed4b5d38-2fa1-44bc-9e34-9d318cd6ff72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParallelProcessing/parallel_processing.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +45,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ParallelProcessing/parallel_processing.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ParallelProcessing2/MaxHeap.py" />
   </component>
   <component name="RunManager">
-    <configuration name="parallel_processing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="MaxHeap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -57,11 +56,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ParallelProcessing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ParallelProcessing2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ParallelProcessing/parallel_processing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ParallelProcessing2/MaxHeap.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -72,7 +71,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.parallel_processing" />
+        <item itemvalue="Python.MaxHeap" />
       </list>
     </recent_temporary>
   </component>
@@ -102,30 +101,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="140" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599434637672">
+    <state x="140" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599936257236">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="140" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1599434637672" />
-    <state x="466" y="195" key="FileChooserDialogImpl" timestamp="1599434636504">
+    <state x="140" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1599936257236" />
+    <state x="466" y="195" key="FileChooserDialogImpl" timestamp="1599936256325">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="466" y="195" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1599434636504" />
-    <state width="759" height="251" key="GridCell.Tab.0.bottom" timestamp="1599518928935">
+    <state x="466" y="195" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1599936256325" />
+    <state width="1348" height="214" key="GridCell.Tab.0.bottom" timestamp="1600052902313">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="759" height="251" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599518928935" />
-    <state width="759" height="251" key="GridCell.Tab.0.center" timestamp="1599518928934">
+    <state width="1348" height="214" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1600052902313" />
+    <state width="1348" height="214" key="GridCell.Tab.0.center" timestamp="1600052902312">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="759" height="251" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599518928934" />
-    <state width="759" height="251" key="GridCell.Tab.0.left" timestamp="1599518928934">
+    <state width="1348" height="214" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1600052902312" />
+    <state width="1348" height="214" key="GridCell.Tab.0.left" timestamp="1600052902312">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="759" height="251" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599518928934" />
-    <state width="759" height="251" key="GridCell.Tab.0.right" timestamp="1599518928935">
+    <state width="1348" height="214" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1600052902312" />
+    <state width="1348" height="214" key="GridCell.Tab.0.right" timestamp="1600052902312">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="759" height="251" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599518928935" />
+    <state width="1348" height="214" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1600052902312" />
     <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1598460704610">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
