@@ -1,15 +1,13 @@
 # python3
 
-#create another class with KEY and POINTER to process_time and index--process_time might not be needed
+#BUG WITH [2, 5] [1, 2, 3, 4, 5]
 from collections import namedtuple
 from ParallelProcessing2 import minHeap
 
 Response = namedtuple("Response", ["thread", "start_at"])
-Data = namedtuple("Data", ["finish_time", "process_time"])
 
 class ThreadData:
-    def __init__(self, finish_time, process_time, index):
-        self.finish_time = finish_time
+    def __init__(self, process_time, index):
         self.process_time = process_time
         self.index = index
 
@@ -26,16 +24,18 @@ class Parallel:
         #USE PRIORITY QUEUE (MAX HEAP) TO SORT!!!!! O(nlogn) instead of O(n)
 
         if index < self.n_threads:
-            data = ThreadData(p_time, p_time, index)
-            self.threads.insert(data) #SORT BY FINISH TIME!!!
+            data = ThreadData(p_time, index)
+            item = minHeap.HeapItem(p_time, data)
+            self.threads.insert(item) #SORT BY FINISH TIME!!!
             self.responses.append(Response(index, 0))
 
         else:
-            past_ft = self.threads[0].finish_time
-            past_id = self.threads[0].index
+            past_ft = self.threads.item.key
+            past_id = self.threads.item.item.index
             self.threads.extract_min()
-            data = ThreadData(past_ft + p_time, p_time, past_id)
-            self.threads.insert(data)
+            data = ThreadData(p_time, past_id)
+            item = minHeap.HeapItem(past_ft + p_time, data)
+            self.threads.insert(item)
             self.responses.append(Response(past_id, past_ft))
 
 

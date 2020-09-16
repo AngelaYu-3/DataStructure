@@ -1,11 +1,17 @@
 # python3
 
+class HeapItem:
+    def __init__(self, key, item):
+        self.key = key
+        self.item = item
+
 class MinHeap:
     def __init__(self, max_len):
         self.max_len = max_len
         self.heap = []
 
-    def insert(self, value):
+    def insert(self, item):
+        self.item = item
         length = len(self.heap)
         curr = length
         if curr % 2 == 0:
@@ -14,7 +20,7 @@ class MinHeap:
             p = int((curr - 1) / 2)
 
         if length < self.max_len:
-            self.heap.insert(length, value)
+            self.heap.insert(length, item.key)
             while self.heap[p] > self.heap[curr]:
                 self.heap[p], self.heap[curr] = self.heap[curr], self.heap[p]
                 if p == 0:
@@ -57,31 +63,7 @@ class MinHeap:
                 if r < len(self.heap) and self.heap[r] < self.heap[smallest]:
                     smallest = r
 
-        return(max_val)
+        return max_val
 
     def get_min(self):
-        return(self.heap[0])
-
-
-def main():
-    m = int(input("max: "))
-    test = MaxHeap(m)
-
-    while True:
-        user = input("insert, min, get: ")
-
-        if user == 'insert':
-            value = int(input("value: "))
-            test.insert(value)
-            print(test.heap)
-        elif user == "get":
-            print(test.get_min())
-            print(test.heap)
-        elif user == 'min':
-            print(test.extract_min())
-            print(test.heap)
-        else:
-            exit()
-
-if __name__ == "__main__":
-    main()
+        return self.heap[0]
