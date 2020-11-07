@@ -1,76 +1,66 @@
 # python3
 
-class HeapItem:
-    def __init__(self, key, index):
-        self.key = key
-        self.index = index
-
 class MinHeap:
-    def __init__(self, max_len):
-        self.max_len = max_len
+    def __init__(self, maxLength):
+        self.maxLength = maxLength
         self.heap = []
 
-    def insert(self, item):
-        self.item = item
-        length = len(self.heap)
-        curr = length
-        if curr % 2 == 0:
-            p = int((curr - 2) / 2)
-        else:
-            p = int((curr - 1) / 2)
 
-        if length < self.max_len:
-            self.heap.insert(length, item)
-            while self.heap[p].key > self.heap[curr].key:
-                self.heap[p].key, self.heap[curr].key = self.heap[curr].key, self.heap[p].key
-                if p == 0:
-                    break
-                if p % 2 == 0:
-                    curr = p
-                    p = int((p - 2) / 2)
-                else:
-                    curr = p
-                    p = int((p - 1) / 2)
+    # inserting value into heap
+    def insert(self, value):
+        # sorting heap after inserting value at beginning of heap
+        self.heap.insert(0, value)
+        self.heapify(0)
 
-    def extract_min(self):
-        root = 0
+
+    # removing min value from heap
+    def extract(self):
+        # remembering min value to be returned
+        minValue = self.heap[0]
+        lastIndex = len(self.heap) - 1
+
+        # swapping min value at 0 with last value
+        self.heap[0], self.heap[lastIndex] = self.heap[lastIndex], self.heap[0]
+
+        # removing lastIndex with min value
+        self.heap.pop(lastIndex)
+
+        # sorting heap after removing min value
+        self.heapify(0)
+        return minValue
+
+
+    def heapify(self, root):
+        size = len(self.heap)
         smallest = root
-        l = (2 * root) + 1
-        r = (2 * root) + 2
+        rIndex = 2 * root + 1
+        lIndex = 2 * root + 2
 
-        min_val = self.heap[0].key
-        swap = len(self.heap) - 1
+        # finding smallest value
+        if rIndex < size and self.heap[rIndex] < self.heap[smallest]:
+            smallest = rIndex
+        if lIndex < size and self.heap[lIndex] < self.heap[smallest]:
+            smallest = lIndex
 
-        self.heap[0].key, self.heap[swap].key = self.heap[swap].key, self.heap[0].key
-        self.heap.pop(swap)
+        # if smallest is root, heap is already sorted! can just return heap
+        # if smallest is NOT root, switch root w/ smallest and heapify again w/ new root as smallest index
+        if smallest != root:
+            self.heap[root], self.heap[smallest] = self.heap[smallest], self.heap[root]
+            self.heapify(smallest)
 
-        if l < len(self.heap) and self.heap[l].key < self.heap[smallest].key:
-            smallest = l
-        if r < len(self.heap) and self.heap[r].key < self.heap[smallest].key:
-            smallest = r
+        return self.heap
 
-        if smallest == 0:
-            pass
-        else:
-            while self.heap[smallest].key < self.heap[root].key:
-                self.heap[root].key, self.heap[smallest].key = self.heap[smallest].key, self.heap[root].key
-                root = smallest
-                l = (2 * root) + 1
-                r = (2 * root) + 2
 
-                if l < len(self.heap) and self.heap[l].key < self.heap[smallest].key:
-                    smallest = l
-                if r < len(self.heap) and self.heap[r].key < self.heap[smallest].key:
-                    smallest = r
+def main():
+    test = MinHeap(5)
+    testValues = list(map(int, input().split()))
 
-        return min_val
+    for x in testValues:
+        print(test.insert(x))
 
-    def get_min(self):
-        return self.heap[0].key
+    test.extract()
 
-    def get_min_index(self):
-        return self.heap[0].index
+if __name__== "__main__":
+    main()
 
-    def print(self):
-        for i in range(self.max_len):
-            print("ft: {}  index: {}".format(self.heap[i].key, self.heap[i].index))
+
