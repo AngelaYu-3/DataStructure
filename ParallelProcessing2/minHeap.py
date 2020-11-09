@@ -1,5 +1,11 @@
 # python3
 
+class HeapItem:
+    def __init__(self, finishTime, threadNum, startTime):
+        self.finishTime = finishTime
+        self.threadNum = threadNum
+        self.startTime = startTime
+
 class MinHeap:
     def __init__(self, maxLength):
         self.maxLength = maxLength
@@ -7,10 +13,13 @@ class MinHeap:
 
 
     # inserting value into heap
-    def insert(self, value):
+    def insert(self, item):
         # sorting heap after inserting value at beginning of heap
-        self.heap.insert(0, value)
-        self.heapify(0)
+        if len(self.heap) <= self.maxLength:
+            self.heap.insert(0, item)
+            self.heapify(0)
+        else:
+            print("WRONG: no space in threads")
 
 
     # removing min value from heap
@@ -33,14 +42,22 @@ class MinHeap:
     def heapify(self, root):
         size = len(self.heap)
         smallest = root
-        rIndex = 2 * root + 1
-        lIndex = 2 * root + 2
+        r = 2 * root + 1
+        l = 2 * root + 2
 
-        # finding smallest value
-        if rIndex < size and self.heap[rIndex] < self.heap[smallest]:
-            smallest = rIndex
-        if lIndex < size and self.heap[lIndex] < self.heap[smallest]:
-            smallest = lIndex
+        # finding smallest finishTime value
+        if r < size and self.heap[r].finishTime < self.heap[smallest].finishTime:
+            smallest = r
+        if l < size and self.heap[l].finishTime < self.heap[smallest].finishTime:
+            smallest = l
+
+        # if all finishTimes are the same, smallest threadNum goes first
+        if r < size and self.heap[r].finishTime == self.heap[smallest].finishTime:
+            if self.heap[r].threadNum < self.heap[smallest].threadNum:
+                smallest = r
+        if l < size and self.heap[l].finishTime == self.heap[smallest].finishTime:
+            if self.heap[l].threadNum < self.heap[smallest].threadNum:
+                smallest = l
 
         # if smallest is root, heap is already sorted! can just return heap
         # if smallest is NOT root, switch root w/ smallest and heapify again w/ new root as smallest index
@@ -50,17 +67,22 @@ class MinHeap:
 
         return self.heap
 
+    def getThreadNum(self):
+        return self.heap[0].threadNum
 
-def main():
-    test = MinHeap(5)
-    testValues = list(map(int, input().split()))
+    def getStartTime(self):
+        return self.heap[0].startTime
 
-    for x in testValues:
-        print(test.insert(x))
+    def getFinishTime(self):
+        return self.heap[0].finishTime
 
-    test.extract()
+    def getLength(self):
+        return len(self.heap)
 
-if __name__== "__main__":
-    main()
+    def isFull(self):
+        if len(self.heap) >= self.maxLength:
+            return True
+        else:
+            return False
 
 
