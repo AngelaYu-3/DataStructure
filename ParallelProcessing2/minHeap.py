@@ -1,10 +1,13 @@
 # python3
 
+#3911731663 2946336306 3104934106 2936370273 3114837717 3033959396 3470199591 3444003346 3205065638 3140480513
 class HeapItem:
-    def __init__(self, finishTime, threadNum, startTime):
+    def __init__(self, threadNum, finishTime):
         self.finishTime = finishTime
         self.threadNum = threadNum
-        self.startTime = startTime
+
+    def __str__(self):
+        return str(self.finishTime)
 
 class MinHeap:
     def __init__(self, maxLength):
@@ -15,12 +18,20 @@ class MinHeap:
     # inserting value into heap
     def insert(self, item):
         # sorting heap after inserting value at beginning of heap
-        if len(self.heap) <= self.maxLength:
-            self.heap.insert(0, item)
-            self.heapify(0)
-        else:
-            print("WRONG: no space in threads")
+        if len(self.heap) < self.maxLength:
+            current = len(self.heap)
+            self.heap.insert(len(self.heap), item)
 
+            while(self.heap[current].finishTime < self.heap[int((current - 1) /2)].finishTime):
+                self.heap[current], self.heap[int((current - 1)/2)] = self.heap[int((current - 1) /2)], self.heap[current]
+                current = int((current - 1)/2)
+
+        minValue = self.heap[0].finishTime
+        for i in range(len(self.heap)):
+            if (self.heap[i].finishTime < minValue):
+                print("WRONG: Incorrect insert")
+                self.print()
+                exit(1)
 
     # removing min value from heap
     def extract(self):
@@ -36,14 +47,16 @@ class MinHeap:
 
         # sorting heap after removing min value
         self.heapify(0)
+
+        #print("Extract: {}".format(minValue))
         return minValue
 
 
     def heapify(self, root):
         size = len(self.heap)
         smallest = root
-        r = 2 * root + 1
-        l = 2 * root + 2
+        r = 2 * root + 2
+        l = 2 * root + 1
 
         # finding smallest finishTime value
         if r < size and self.heap[r].finishTime < self.heap[smallest].finishTime:
@@ -70,9 +83,6 @@ class MinHeap:
     def getThreadNum(self):
         return self.heap[0].threadNum
 
-    def getStartTime(self):
-        return self.heap[0].startTime
-
     def getFinishTime(self):
         return self.heap[0].finishTime
 
@@ -80,9 +90,25 @@ class MinHeap:
         return len(self.heap)
 
     def isFull(self):
-        if len(self.heap) >= self.maxLength:
+        if len(self.heap) == self.maxLength:
             return True
         else:
             return False
 
+    def print(self):
+        print(*self.heap)
 
+#def main():
+    #test = MinHeap(10)
+    #time_array=[3911731663, 2946336306, 3104934106, 2936370273, 3114837717, 3033959396, 3470199591, 3444003346, 3205065638, 3140480513]
+    #for i in range(len(time_array)):
+         #item = HeapItem(0, time_array[i])
+         #test.insert(item)
+         #test.heap.append(item)
+    #test.print()
+    #test.heapify(0)
+    #test.print()
+
+
+#if __name__ == "__main__":
+    #main()

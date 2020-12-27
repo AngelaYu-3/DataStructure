@@ -120,7 +120,7 @@ class LinkedList:
             data = current.next.data
             return data
 
-    #connect linked list with users
+    #user input
     def user(self, option):
        if option == 'size':
            return self.sz()

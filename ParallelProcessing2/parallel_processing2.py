@@ -17,35 +17,34 @@ class ParallelProcess:
 
     def process(self, processTime):
         if not self.thread.isFull():
-            #print("L1")
             threadNum = self.thread.getLength()
-            item = minHeap.HeapItem(processTime, threadNum, 0)
+            item = minHeap.HeapItem(threadNum, processTime)
             self.thread.insert(item)
+            #self.thread.print()
+            #print(" ")
+
             self.responses.append(Response(threadNum, 0))
         else:
-            #print("L2")
-            startTime = self.thread.getStartTime()
-            #print(startTime)
             threadNum = self.thread.getThreadNum()
-
             finishTime = self.thread.getFinishTime()
-            #print(finishTime)
-            item = minHeap.HeapItem(processTime + finishTime, threadNum, finishTime)
-            self.thread.extract()
-            self.thread.insert(item)
+            item = minHeap.HeapItem(threadNum, finishTime + processTime)
+
             self.responses.append(Response(threadNum, finishTime))
-
-
+            self.thread.extract()
+            #self.thread.print()
+            self.thread.insert(item)
+            #self.thread.print()
+            #print(" ")
 
 def main():
-    process = ParallelProcess()
+    obj = ParallelProcess()
 
-    # responses = test.process_helper()
-    for i in range(process.numJobs):
-        process.process(process.processTime[i])
+    for i in range(obj.numJobs):
+        obj.process(obj.processTime[i])
 
-    for i in process.responses:
+    for i in obj.responses:
         print(i.threadNum, i.startTime)
+
 
 if __name__== "__main__":
     main()
